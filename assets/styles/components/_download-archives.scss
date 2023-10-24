@@ -1,0 +1,25 @@
+.download-archives {
+    padding: 15px;
+
+    &__title {
+        color: var(--color_text);
+        font-size: 16px;
+        margin-bottom: 3px;
+        display: block;
+    }
+
+    &__buttons {
+        @include start-at(xslg) {
+            display: flex;
+            align-items: center;
+        }
+
+        & .link {
+            margin-right: 10px;
+        }
+
+        .span-link {
+            line-height: 1.2;
+        }
+    }
+}

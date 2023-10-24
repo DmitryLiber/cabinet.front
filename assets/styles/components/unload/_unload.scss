@@ -1,0 +1,45 @@
+.unload {
+    font-size: 14px;
+    line-height: 1.2;
+
+    &__title {
+        margin: 0 0 20px;
+        display: block;
+        font-size: 22px;
+
+        @include start-at(xslg) {
+            font-size: 25px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 15px;
+
+        @include start-at(xslg) {
+            grid-template-columns: 35% 1fr;
+        }
+    }
+
+    &__list {
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__info {
+        position: sticky;
+        top: 10px;
+
+        @include active-by(xslg) {
+            grid-row: 1;
+        }
+
+        .notice, .download-archives {
+            position: sticky;
+            top: 10px;
+        }
+    }
+}

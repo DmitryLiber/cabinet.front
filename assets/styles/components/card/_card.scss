@@ -1,0 +1,62 @@
+.card {
+    color: var(--color_text);
+    padding: 15px;
+
+    &__title {
+        font-size: 18px;
+        display: block;
+
+        @include start-at(xslg) {
+            font-size: 20px;
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        margin: 0;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list_alt {
+        .card {
+            &__item {
+                padding: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        list-style: none;
+        padding-left: 10px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            content: "-";
+        }
+    }
+
+    &_green,
+    &_red {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &_green {
+        border-left: 10px solid var(--color_success);
+    }
+
+    &_red {
+        border-left: 10px solid var(--color_danger);
+    }
+}
